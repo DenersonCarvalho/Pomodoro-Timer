@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer Pomodoro</title>
+    <link rel="stylesheet" href="_css/style.css" />
+    <link rel="icon" href="_img/pomodoro.png" type="image/png">
+    <script src="https://kit.fontawesome.com/4aadeb1ec6.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <nav>
+      <h1>Pomodoro Timer</h1>
+      <div>
+        <a href="#" id="pause" onclick="pausar()"><i class="fa-solid fa-pause" ></i></a>
+        <a href="#" id="play" onclick="executar()"><i class="fa-solid fa-play"></i></a>
+      </div>
+      <audio src="_audio/lo-fi.mp3" type="audio/mpeg" id="lofi"></audio>
+    </nav>
+
+    <main>
+      <section id="config">
+        <div>
+          <label for="inputAcao"><h4>Ação</h4></label>
+          <input type="number" id="inputAcao" />
+          <small id="erro-acao"></small>
+        </div>
+        <div>
+          <label for="inputPausa"><h4>Pausa</h4></label>
+          <input type="number" id="inputPausa" />
+          <small id="erro-pausa"></small>
+        </div>
+        <div>
+          <label for="inputSessao"><h4>Sessões</h4></label>
+          <input type="number" id="inputSessao" />
+          <small id="erro-sessao"></small>
+        </div>
+        <input type="button" value="Iniciar" onclick="iniciar()">
+      </section>
+
+      <section id="timer">
+        <div>
+          <h3 id="titulo"></h3>
+        </div>
+        <div class="contador">
+          <span id="minutos"></span>
+          <span>:</span>
+          <span id="segundos"></span>
+        </div>
+        <div>
+          <h3 id="titulo-secundario"></h3>
+        </div>
+      </section>
+
+      <section id="finalizacao">
+        <h1>Parabéns, você finalizou suas tarefas.</h1>
+        <a href="">Inicío</a>
+      </section>
+    </main>
+
+    <script src="_js/scripts.js"></script>
+
+  </body>
+</html>
